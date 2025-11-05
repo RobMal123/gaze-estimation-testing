@@ -43,7 +43,7 @@ This will:
 
 - Use `input/test.mp4` as the source video (default)
 - Use `resnet50` model (default)
-- Save output to `output/delivery_out.mp4`
+- Save output to `output/test_out.mp4`
 - Save output to `results/attention.mp4` (default)
 
 ## Custom Usage
