@@ -27,28 +27,6 @@ Download the pre-trained ResNet-50 weights:
 
 After downloading, place the `resnet50.pt` file in the `gaze-estimation/weights/` folder.
 
-#### Option B: Download from GitHub Releases
-
-Available models from the [official releases page](https://github.com/yakhyo/gaze-estimation/releases/tag/v0.0.1):
-
-- `resnet18` - 43 MB, MAE: 12.84
-- `resnet34` - 81.6 MB, MAE: 11.33
-- `resnet50` - 91.3 MB, MAE: 11.34
-- `mobilenetv2` - 9.59 MB, MAE: 13.07
-- `mobileone_s0` - 4.8 MB, MAE: 12.58
-
-Download your preferred model and place it in `gaze-estimation/weights/`.
-
-#### Option C: Using download script (Linux/Mac only)
-
-```bash
-cd gaze-estimation
-sh download.sh resnet50
-cd ..
-```
-
-**Note**: The download script may not work on Windows. Use Option A or B instead.
-
 ### 3. Prepare Your Video
 
 Place your test video file (e.g., `ad_test.mp4`) in the `input/` folder.
