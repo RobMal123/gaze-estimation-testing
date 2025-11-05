@@ -110,6 +110,11 @@ def main(params):
                 x_min, y_min, x_max, y_max = map(int, bbox[:4])
 
                 image = frame[y_min:y_max, x_min:x_max]
+                
+                # Skip if cropped image is empty or invalid
+                if image is None or image.size == 0:
+                    continue
+                
                 image = pre_process(image)
                 image = image.to(device)
 
