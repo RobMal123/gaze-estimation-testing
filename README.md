@@ -19,15 +19,17 @@ This will install:
 
 ### 2. Download Model Weights
 
-Download the model weights you want to use. For example, to download ResNet-50 weights:
+#### Option A: Download from Google Drive (Recommended)
 
-```bash
-cd gaze-estimation
-sh download.sh resnet50
-cd ..
-```
+Download the pre-trained ResNet-50 weights:
 
-Available models:
+- **[Download resnet50.pt from Google Drive](https://drive.google.com/file/d/1iXMWdS9HwRDW7OLKN-LGr7N1ghgfT59k/view?usp=sharing)**
+
+After downloading, place the `resnet50.pt` file in the `gaze-estimation/weights/` folder.
+
+#### Option B: Download from GitHub Releases
+
+Available models from the [official releases page](https://github.com/yakhyo/gaze-estimation/releases/tag/v0.0.1):
 
 - `resnet18` - 43 MB, MAE: 12.84
 - `resnet34` - 81.6 MB, MAE: 11.33
@@ -35,7 +37,17 @@ Available models:
 - `mobilenetv2` - 9.59 MB, MAE: 13.07
 - `mobileone_s0` - 4.8 MB, MAE: 12.58
 
-Or download manually from the [releases page](https://github.com/yakhyo/gaze-estimation/releases/tag/v0.0.1) and place them in `gaze-estimation/weights/`.
+Download your preferred model and place it in `gaze-estimation/weights/`.
+
+#### Option C: Using download script (Linux/Mac only)
+
+```bash
+cd gaze-estimation
+sh download.sh resnet50
+cd ..
+```
+
+**Note**: The download script may not work on Windows. Use Option A or B instead.
 
 ### 3. Prepare Your Video
 
@@ -124,9 +136,12 @@ The script automatically uses CUDA if available, otherwise falls back to CPU. Th
 
 Make sure your video file is in the `input/` folder and the filename matches what you specify with `--source`.
 
-## Original Repository
+## Credits & Attribution
 
-For more information about MobileGaze, visit:
+This project includes a modified version of [MobileGaze](https://github.com/yakhyo/gaze-estimation) by [yakhyo](https://github.com/yakhyo).
 
-- GitHub: https://github.com/yakhyo/gaze-estimation
-- Pre-trained models are available in the [releases](https://github.com/yakhyo/gaze-estimation/releases/tag/v0.0.1)
+- **Original Repository**: https://github.com/yakhyo/gaze-estimation
+- **License**: See `gaze-estimation/LICENSE`
+- **Pre-trained models**: Available in the [releases](https://github.com/yakhyo/gaze-estimation/releases/tag/v0.0.1)
+
+The `gaze-estimation/` folder contains the MobileGaze codebase with minor modifications. The wrapper scripts (`run_gaze_estimation.py`, `setup.py`) and project documentation are original contributions.
