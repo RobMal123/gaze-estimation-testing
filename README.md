@@ -29,20 +29,21 @@ After downloading, place the `resnet50.pt` file in the `gaze-estimation/weights/
 
 ### 3. Prepare Your Video
 
-Place your test video file (e.g., `ad_test.mp4`) in the `input/` folder.
+Place your test video file (e.g., `test.mp4`) in the `input/` folder.
 
 ### 4. Run Gaze Estimation
 
 Run the gaze estimation on your video:
 
 ```bash
-python run_gaze_estimation.py
+python run_gaze_estimation.py --source input/test.mp4 --output output/test_out.mp4
 ```
 
 This will:
 
-- Use `input/ad_test.mp4` as the source video (default)
+- Use `input/test.mp4` as the source video (default)
 - Use `resnet50` model (default)
+- Save output to `output/delivery_out.mp4`
 - Save output to `results/attention.mp4` (default)
 
 ## Custom Usage
