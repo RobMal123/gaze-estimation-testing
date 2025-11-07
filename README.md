@@ -1,6 +1,6 @@
 # MobileGaze Gaze Estimation Setup
 
-This project runs **inference-only** gaze estimation on videos using a streamlined version of [MobileGaze](https://github.com/yakhyo/gaze-estimation) with enhanced 3D-style arrow visualization.
+This project runs **inference-only** gaze estimation on videos using a streamlined version of [MobileGaze](https://github.com/yakhyo/gaze-estimation) 
 
 ## Quick Start
 
