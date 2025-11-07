@@ -36,7 +36,7 @@ Place your test video file (e.g., `test.mp4`) in the `input/` folder.
 Run the gaze estimation on your video:
 
 ```bash
-python run_gaze_estimation.py --source input/test.mp4 --output output/test_out.mp4
+python run_gaze_estimation.py --source input/drottninggatan.mp4 --output output/drottninggatan_out.mp4
 ```
 
 This will:
