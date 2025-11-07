@@ -1,6 +1,12 @@
 # MobileGaze Gaze Estimation Setup
 
-This project sets up and runs gaze estimation on videos using the [MobileGaze](https://github.com/yakhyo/gaze-estimation) repository.
+This project runs **inference-only** gaze estimation on videos using a streamlined version of [MobileGaze](https://github.com/yakhyo/gaze-estimation) with enhanced 3D-style arrow visualization.
+
+## Features
+
+✨ **Enhanced 3D-Style Arrows** - Gaze360-inspired solid arrows with depth effects and lighting
+🎯 **Inference-Only** - Clean, production-ready codebase focused solely on video processing
+🚀 **Optimized Dependencies** - Minimal requirements with only essential packages
 
 ## Quick Start
 
@@ -12,10 +18,11 @@ The repository has already been cloned. To set up dependencies, run:
 python setup.py
 ```
 
-This will install:
+This will install the core dependencies:
 
-- Dependencies from `gaze-estimation/requirements.txt`
-- Additional packages: `opencv-python`, `matplotlib`, `torch`, `torchvision`
+- `numpy`, `opencv-python`, `pillow`
+- `torch`, `torchvision` (PyTorch for model inference)
+- `uniface` (RetinaFace for face detection)
 
 ### 2. Download Model Weights
 
@@ -87,12 +94,16 @@ python run_gaze_estimation.py --model mobilenetv2
 
 ```
 .
-├── gaze-estimation/          # Cloned MobileGaze repository
+├── gaze-estimation/          # Streamlined MobileGaze (inference only)
+│   ├── models/               # Model architectures (ResNet, MobileNet, MobileOne)
+│   ├── utils/
+│   │   └── helpers.py       # 3D-style arrow rendering & utilities
 │   ├── weights/              # Model weights (download separately)
+│   ├── config.py            # Dataset configurations
 │   ├── inference.py         # Main inference script
-│   └── ...
+│   └── requirements.txt     # Minimal dependencies
 ├── input/                    # Place your test videos here
-├── results/                  # Output videos saved here
+├── output/                   # Output videos saved here
 ├── setup.py                 # Setup script for dependencies
 ├── run_gaze_estimation.py   # Wrapper script to run gaze estimation
 └── README.md                # This file
@@ -117,10 +128,10 @@ Make sure your video file is in the `input/` folder and the filename matches wha
 
 ## Credits & Attribution
 
-This project includes a modified version of [MobileGaze](https://github.com/yakhyo/gaze-estimation) by [yakhyo](https://github.com/yakhyo).
+This project is based on [MobileGaze](https://github.com/yakhyo/gaze-estimation) by [yakhyo](https://github.com/yakhyo), streamlined for inference with enhanced visualization.
 
 - **Original Repository**: https://github.com/yakhyo/gaze-estimation
 - **License**: See `gaze-estimation/LICENSE`
 - **Pre-trained models**: Available in the [releases](https://github.com/yakhyo/gaze-estimation/releases/tag/v0.0.1)
 
-The `gaze-estimation/` folder contains the MobileGaze codebase with minor modifications. The wrapper scripts (`run_gaze_estimation.py`, `setup.py`) and project documentation are original contributions.
+The `gaze-estimation/` folder contains the MobileGaze codebase with modifications. The wrapper scripts (`run_gaze_estimation.py`, `setup.py`) and project documentation are original contributions.
