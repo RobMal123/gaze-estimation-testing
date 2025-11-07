@@ -2,12 +2,6 @@
 
 This project runs **inference-only** gaze estimation on videos using a streamlined version of [MobileGaze](https://github.com/yakhyo/gaze-estimation) with enhanced 3D-style arrow visualization.
 
-## Features
-
-✨ **Enhanced 3D-Style Arrows** - Gaze360-inspired solid arrows with depth effects and lighting
-🎯 **Inference-Only** - Clean, production-ready codebase focused solely on video processing
-🚀 **Optimized Dependencies** - Minimal requirements with only essential packages
-
 ## Quick Start
 
 ### 1. Clone and Setup
@@ -43,7 +37,7 @@ Place your test video file (e.g., `test.mp4`) in the `input/` folder.
 Run the gaze estimation on your video:
 
 ```bash
-python run_gaze_estimation.py --source input/drottninggatan.mp4 --output output/drottninggatan_out.mp4
+python run_gaze_estimation.py --source input/test.mp4 --output output/test_out.mp4
 ```
 
 This will:
@@ -52,8 +46,6 @@ This will:
 - Use `resnet50` model (default)
 - Save output to `output/test_out.mp4`
 - Save output to `results/attention.mp4` (default)
-
-## Custom Usage
 
 ### Command-Line Arguments
 
